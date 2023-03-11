@@ -1,0 +1,141 @@
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 430;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body { 
+    height: 100vh;
+    width: 100cw;
+}
+
+/* header style */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+
+    padding: 13px 30px;
+    border-bottom: 1px solid #D9D9D9;
+
+    z-index: 500;
+    background-color: white;
+}
+
+.header-contents {
+    height: 32px;
+    cursor: pointer;
+}
+
+/* main contents */
+.main-contents {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+
+    padding-inline: 15px;
+
+    width: 100%;
+    height: calc( 100% - 22% - 64px );
+}
+
+/* main contents style */
+.section-contents{
+    display: flex;
+    flex-direction: column;
+}
+
+/* section style */
+
+section {
+    display: flex;
+    justify-content: top;
+    align-items: center;
+    padding: 15px;
+
+    width: 100%;
+    height: 100%;
+    transition: 0.3s ease-in-out;
+}
+
+section div { 
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    padding: 15px;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+hr {
+    color: #D9D9D9;
+    margin: 5px 0px;
+    width: 85%;
+}
+
+#home-btn {
+    display: block;
+
+    width: 300px;
+    height: 80px;
+
+    border: 0;
+    line-height: 2.5;
+    font-size: 2rem;
+    text-align: center;
+    color: #FFF;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: #2573D9;
+   
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                inset -2px -2px 3px rgba(0, 0, 0, .6);
+    cursor: pointer;
+    z-index: 50;
+
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 22%;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 1px;
+    padding-inline: 30px;
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom : 20px;
+}
+
+table td {
+    width: 350px;
+    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    vertical-align: top;
+}
+
+/* section div.comment-div p.comment-contents {
+    font-size: 1rem;
+} */

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewprot" content="width=device-width, initial-scale=1.0">
+    <title>EnterView</title>
+    
+    <link rel="stylesheet" href="./resultStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <script defer type="text/javascript" src="./result.js"></script>
+</head>
+<body>
+    <header>
+        <a href="../index.html">
+            <img id="header-logo-img" class="header-contents" src="..\asset\enterview_logo.png" alt="main-logo" />
+        </a>
+        <!--<span id="header-menu-svg" class="header-contents">
+            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M21,6H3V5h18V6z M21,11H3v1h18V11z M21,17H3v1h18V17z" class="style-scope yt-icon"></path></g></svg>
+        </span> -->
+    </header>
+
+    <div class="main-contents">
+        <section class="section-contents">
+            <h1> Summery </h1>
+            <hr />
+            <div id="total-time-div">
+                <h2> Total time </h2>
+                <p id="total-time"></p>
+            </div>
+            
+
+            <h2> Avrage Emotion </h2>
+            <table id="aside-emotions">
+                <tbody id="avr-emotions-items">
+                </tbody>
+            </table>
+        </section>
+        <section class="section-contents">
+            <h1> Detail </h1>
+            <hr />
+            <div>
+                <h2> Score Analize </h2>
+                <h3> 최고/최저 점수 </h3>
+                <table class="score-table">    
+                    <tbody>
+                        <tr>
+                            <td>최고 점수</td>
+                            <td id="best-score">-점</td>
+                        </tr>
+                        <tr>
+                            <td>최저 점수</td>
+                            <td id="worst-score">-점</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <h3> Score Duration </h3>
+
+                <table class="score-table">    
+                    <tbody>
+                        <tr>
+                            <td>긍정적 평가 지속 시간</td>
+                            <td id="positive-duration">-</td>
+                        </tr>
+                        <tr>
+                            <td>부정적 평가 지속 시간</td>
+                            <td id="negative-duration">-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>            
+        </section>
+        <section class="section-contents">
+            <h1> Evaluation </h1>
+            <hr />
+
+            <div id="score-div">
+                <h2>Total Score</h2> 
+                <p id="total-score"></p>
+            </div>
+            
+            <div class="comment-div">
+                <h2> Comment </h2>
+                <p id="comment"></p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <a href="../index.html">
+            <button id="home-btn">
+                홈으로 이동
+            </button>
+        </a>
+    </footer>
+
+</body>
+</html>

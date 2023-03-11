@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewprot" content="width=device-width, initial-scale=1.0">
+    <title>EnterView</title>
+    
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <script defer src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script defer type="text/javascript" src="./analize.js"></script>
+</head>
+<body>
+    <!-- <div id="cover-div"></div> -->
+    <header>
+        <a href="../index.html">
+            <img id="header-logo-img" class="header-contents" src="..\asset\enterview_logo.png" alt="main-logo" />
+        </a>
+
+        <span id="header-menu-svg" class="header-contents">
+            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M21,6H3V5h18V6z M21,11H3v1h18V11z M21,17H3v1h18V17z" class="style-scope yt-icon"></path></g></svg>
+        </span>
+    </header>
+
+    <div class="main-contents">
+        <section class="section-contents">
+
+            <div id="sec-video-contents" >
+                <!--비디오 나오는 곳-->
+                <video  id="sec-video" class="align-center" width="640" height="480"></video>
+
+                <div id="sec-video-buttons" class="align-center">
+                    <a type=button onclick="{getVideo()}"><img  src="../asset/camera_icon.png"></a>
+                    <p id="sec-video-text">카메라 버튼을 누르면<br/>테스트가 시작됩니다</p>
+                </div>
+            </div>
+
+            <p id="sec-warning-msg">
+                얼굴이 인식되지 않고 있습니다. <br/>카메라를 정면에서 바라봐주세요.
+            </p>
+            <!-- 캡처된 이미지 보이는 곳 -->
+
+            <canvas id="sec-canvas" width="640" height="480" style="border: 1px solid #ddd;"></canvas>
+
+            <!-- <input type=button value="get Pic" onclick="{takeSnapshot()}"><br>
+                Take snapshot every 
+            <input type=number id="myInterval"  value="3000"> milliseconds
+            <input type=button value="Auto" onclick="{takeAuto()}"> -->
+
+            <div id="sec-timer">
+                00:00:00
+            </div>
+
+        </section>
+
+        <aside class="aside-contents">
+            <h1>
+                Main Emotion
+            </h1>
+            <hr />
+
+            <table id="aside-emotions" class="type04">
+                <!-- <thead>
+                    <tr>
+                        <th colspan="2">
+                    </tr>
+                </thead> -->
+                <tbody id="aside-emotions-items">
+                    <!-- <tr>
+                        <td class="emotion-name">NONE</td>
+                        <td class="emotion-percentage">0.0%</td>
+                    </tr>
+                    <tr>
+                        <td class="emotion-name">NONE</td>
+                        <td class="emotion-percentage">0.0%</td>
+                    </tr>
+                    <tr>
+                        <td class="emotion-name">NONE</td>
+                        <td class="emotion-percentage">0.0%</td>
+                    </tr>
+                    <tr>
+                        <td class="emotion-name">NONE</td>
+                        <td class="emotion-percentage">0.0%</td>
+                    </tr>
+                    <tr>
+                        <td  id = "last-tr" class="emotion-name">NONE</td>
+                        <td  id = "last-tr" class="emotion-percentage">0.0%</td>
+                    </tr> -->
+                </tbody>
+            </table>
+
+            <h1>
+                Evaluation
+            </h1>
+            <hr />
+            <div class="score-div">
+                <p>현재 점수 : </p>
+                <p id="aside-evaluation-score">0</p>
+                <p>점</p>
+            </div>
+            
+            <button id="aside-result-btn" type="button">
+                측정 종료
+            </button>
+        </aside>
+    </div>
+</body>
+</html>
